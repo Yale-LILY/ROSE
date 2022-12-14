@@ -8,6 +8,13 @@ layout: default
   let data;
   function main() {
     data = {{ site.data.protocol-comparison | jsonify }};
+    const select = document.getElementById('btn-group');
+    select.addEventListener('click', ({ target }) => { // handler fires on root container click
+      // if (target.getAttribute('name') === 'option_gender') { // check if user clicks right element
+      //   alert('Filter by: ' + target.value);
+      // }
+      alert('Filter by: ' + target.value);
+    });
     // console.log(data);
   }
   window.onload = function () {
@@ -56,7 +63,7 @@ layout: default
         </div>
         <hr>
         <h3> System Outputs </h3>
-        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group" id="btn-group">
           <input type="radio" class="btn-check" name="btnradio" id="btn-gpt3" autocomplete="off" checked>
           <label class="btn btn-outline-primary" for="btn-gpt3">GPT-3</label>
         
