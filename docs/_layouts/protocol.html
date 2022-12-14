@@ -19,6 +19,7 @@ layout: default
     // sample a random example
     var example = data[Math.floor(Math.random() * data.length)];
     document.getElementById('reference').innerText = example.reference;
+    document.getElementById('reference-1').innerText = example.reference;
     document.getElementById('article').innerText = example.source;
   }
 </script>
@@ -54,6 +55,21 @@ layout: default
             <p class="card-text" id="reference"> </p>
           </div>
         </div>
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            <p class="card-text" id="reference-1"> </p>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
