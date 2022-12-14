@@ -6,15 +6,20 @@ layout: default
 
 <script>
   let data;
+  let example;
+  function changeSystem(target) {
+    var name = target.getAttribute('name');
+    alert(name);
+    // parse the name to get the system name
+    var system = name.split('-')[1];
+    // get the system output
+    var output = example["system_outputs"][system];
+  }
+
   function main() {
     data = {{ site.data.protocol-comparison | jsonify }};
     const select = document.getElementById('btn-group');
-    select.addEventListener('click', ({ target }) => { // handler fires on root container click
-      // if (target.getAttribute('name') === 'option_gender') { // check if user clicks right element
-      //   alert('Filter by: ' + target.value);
-      // }
-      alert('Filter by: ' + target.value);
-    });
+    select.addEventListener('click', ({ target }) => changeSystem(target));
     // console.log(data);
   }
   window.onload = function () {
@@ -24,7 +29,7 @@ layout: default
 
   function sampleData() {
     // sample a random example
-    var example = data[Math.floor(Math.random() * data.length)];
+    example = data[Math.floor(Math.random() * data.length)];
     document.getElementById('reference').innerText = example.reference;
     document.getElementById('article').innerText = example.source;
   }
