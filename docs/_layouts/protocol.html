@@ -23,7 +23,7 @@ layout: default
   }
 
   function main() {
-    data = {{ site.data.protocol-comparison | jsonify }};
+    data = {{ site.data.protocol-comparison-llm | jsonify }};
     const select = document.getElementById('btn-group');
     select.addEventListener('click', ({ target }) => changeSystem(target));
     // console.log(data);
