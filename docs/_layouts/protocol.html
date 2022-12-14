@@ -20,6 +20,13 @@ layout: default
     var output = example["system_outputs"][system];
     // update the output
     document.getElementById('output').innerText = output;
+    // update table content
+    var output = example["annotations"][system];
+    document.getElementById('tab-prior').innerText = output["prior"];
+    document.getElementById('tab-ref-free').innerText = output["ref_free"];
+    document.getElementById('tab-ref-based').innerText = output["ref_based"];
+    document.getElementById('tab-acu').innerText = output["acu"];
+    document.getElementById('tab-nacu').innerText = output["normalized_acu"];
   }
 
   function main() {
@@ -41,6 +48,13 @@ layout: default
     var output = example["system_outputs"]["gpt3"];
     // update the output
     document.getElementById('output').innerText = output;
+    // update table content
+    var output = example["annotations"]["gpt3"];
+    document.getElementById('tab-prior').innerText = output["prior"];
+    document.getElementById('tab-ref-free').innerText = output["ref_free"];
+    document.getElementById('tab-ref-based').innerText = output["ref_based"];
+    document.getElementById('tab-acu').innerText = output["acu"];
+    document.getElementById('tab-nacu').innerText = output["normalized_acu"];
     document.getElementById('article').innerText = example.source;
   }
 </script>
@@ -96,6 +110,28 @@ layout: default
           <div class="card-body">
             <p class="card-text" id="output"> </p>
           </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Prior</th>
+                <th scope="col">Ref-free</th>
+                <th scope="col">Ref-based</th>
+                <th scope="col">ACU</th>
+                <th scope="col">normalized ACU</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <tr>
+                <td id="tab-prior"></td>
+                <td id="tab-ref-free"></td>
+                <td id="tab-ref-based"></td>
+                <td id="tab-acu"></td>
+                <td id="tab-nacu"></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
