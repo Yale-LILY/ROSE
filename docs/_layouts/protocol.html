@@ -57,19 +57,43 @@ layout: default
         </div>
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Active</a>
+            <a
+              class="nav-link active"
+              id="ex1-tab-1"
+              href="#ex1-tabs-1"
+              role="tab"
+              aria-controls="ex1-tabs-1"
+              aria-selected="true"
+              >Tab 1</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-            <p class="card-text" id="reference-1"> </p>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a
+              class="nav-link"
+              id="ex1-tab-2"
+              href="#ex1-tabs-2"
+              role="tab"
+              aria-controls="ex1-tabs-2"
+              aria-selected="false"
+              >Tab 2</a
+            >
           </li>
         </ul>
+        <!-- Tabs content -->
+        <div class="tab-content" id="ex1-content">
+          <div
+            class="tab-pane fade show active"
+            id="ex1-tabs-1"
+            role="tabpanel"
+            aria-labelledby="ex1-tab-1"
+          >
+            Tab 1 content
+          </div>
+          <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+            Tab 2 content
+          </div>
+        </div>
+        <!-- Tabs content -->
       </div>
     </div>
   </div>
