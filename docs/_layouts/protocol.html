@@ -55,47 +55,23 @@ layout: default
             <p class="card-text" id="reference"> </p>
           </div>
         </div>
-        <ul class="nav nav-tabs" role="tablist">
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link active"
-              id="ex1-tab-1"
-              data-mdb-toggle="tab"
-              href="#ex1-tabs-1"
-              role="tab"
-              aria-controls="ex1-tabs-1"
-              aria-selected="true"
-              >Tab 1</a
-            >
+        <ul class="nav nav-tabs card-header-tabs" data-bs-tabs="tabs">
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="true" data-bs-toggle="tab" href="#dhcp">DHCP</a>
           </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link"
-              id="ex1-tab-2"
-              data-mdb-toggle="tab"
-              href="#ex1-tabs-2"
-              role="tab"
-              aria-controls="ex1-tabs-2"
-              aria-selected="false"
-              >Tab 2</a
-            >
+          <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#static">Static</a>
           </li>
         </ul>
-        <!-- Tabs content -->
-        <div class="tab-content" id="ex1-content">
-          <div
-            class="tab-pane fade show active"
-            id="ex1-tabs-1"
-            role="tabpanel"
-            aria-labelledby="ex1-tab-1"
-          >
-            Tab 1 content
+        <form class="card-body tab-content">
+          <div class="tab-pane active" id="dhcp">
+              <p class="card-text">Change DHCP Network settings.</p>
           </div>
-          <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-            Tab 2 content
+          <div class="tab-pane" id="static">
+              <p class="card-text">Change Static Network settings.</p>
           </div>
-        </div>
-        <!-- Tabs content -->
+          <button class="btn btn-primary" type="submit">Save</button>
+        </form>
       </div>
     </div>
   </div>
