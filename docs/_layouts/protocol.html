@@ -8,12 +8,14 @@ layout: default
   let data;
   let example;
   function changeSystem(target) {
-    var name = target.getAttribute('name');
+    var name = target.getAttribute('id');
     alert(name);
     // parse the name to get the system name
     var system = name.split('-')[1];
     // get the system output
     var output = example["system_outputs"][system];
+    // update the output
+    document.getElementById('output').innerText = output;
   }
 
   function main() {
@@ -80,6 +82,11 @@ layout: default
 
           <input type="radio" class="btn-check" name="btnradio" id="btn-bart" autocomplete="off">
           <label class="btn btn-outline-primary" for="btn-bart">BART</label>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text" id="output"> </p>
         </div>
       </div>
     </div>
