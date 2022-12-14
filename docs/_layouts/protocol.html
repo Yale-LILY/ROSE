@@ -8,12 +8,12 @@ layout: default
   let data;
   let example;
   function changeSystem(target) {
-    console.log(target);
+    // console.log(target);
     var name = target.getAttribute('id');
     if (name == null) {
       return;
     }
-    alert(name);
+    // alert(name);
     // parse the name to get the system name
     var system = name.split('-')[1];
     // get the system output
@@ -38,6 +38,10 @@ layout: default
     example = data[Math.floor(Math.random() * data.length)];
     document.getElementById('reference').innerText = example.reference;
     document.getElementById('article').innerText = example.source;
+    // get the system output
+    var output = example["system_outputs"]["gpt3"];
+    // update the output
+    document.getElementById('output').innerText = output;
   }
 </script>
 
@@ -87,6 +91,7 @@ layout: default
           <input type="radio" class="btn-check" name="btnradio" id="btn-bart" autocomplete="off">
           <label class="btn btn-outline-primary" for="btn-bart">BART</label>
         </div>
+        <br>
         <div class="card">
           <div class="card-body">
             <p class="card-text" id="output"> </p>
