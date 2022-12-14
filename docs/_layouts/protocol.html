@@ -22,11 +22,11 @@ layout: default
     document.getElementById('output').innerText = output;
     // update table content
     var output = example["annotations"][system];
-    document.getElementById('tab-prior').innerText = output["prior"];
-    document.getElementById('tab-ref-free').innerText = output["ref_free"];
-    document.getElementById('tab-ref-based').innerText = output["ref_based"];
-    document.getElementById('tab-acu').innerText = output["acu"];
-    document.getElementById('tab-nacu').innerText = output["normalized_acu"];
+    document.getElementById('tab-prior').innerText = output["prior"].toFixed(2);
+    document.getElementById('tab-ref-free').innerText = output["ref_free"].toFixed(2);
+    document.getElementById('tab-ref-based').innerText = output["ref_based"].toFixed(2);
+    document.getElementById('tab-acu').innerText = output["acu"].toFixed(2);
+    document.getElementById('tab-nacu').innerText = output["normalized_acu"].toFixed(2);
   }
 
   function main() {
@@ -50,11 +50,11 @@ layout: default
     document.getElementById('output').innerText = output;
     // update table content
     var output = example["annotations"]["gpt3"];
-    document.getElementById('tab-prior').innerText = output["prior"];
-    document.getElementById('tab-ref-free').innerText = output["ref_free"];
-    document.getElementById('tab-ref-based').innerText = output["ref_based"];
-    document.getElementById('tab-acu').innerText = output["acu"];
-    document.getElementById('tab-nacu').innerText = output["normalized_acu"];
+    document.getElementById('tab-prior').innerText = output["prior"].toFixed(2);
+    document.getElementById('tab-ref-free').innerText = output["ref_free"].toFixed(2);
+    document.getElementById('tab-ref-based').innerText = output["ref_based"].toFixed(2);
+    document.getElementById('tab-acu').innerText = output["acu"].toFixed(2);
+    document.getElementById('tab-nacu').innerText = output["normalized_acu"].toFixed(2);
     document.getElementById('article').innerText = example.source;
   }
 </script>
