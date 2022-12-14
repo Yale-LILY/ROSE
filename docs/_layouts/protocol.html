@@ -7,8 +7,7 @@ layout: default
 <script>
   let data;
   function main() {
-    // data = {{ site.data.protocol-comparison | jsonify }};
-    data = {{ site.data.acu-cnndm-test | jsonify }};
+    data = {{ site.data.protocol-comparison | jsonify }};
     // console.log(data);
   }
   window.onload = function () {
@@ -20,47 +19,11 @@ layout: default
     // sample a random example
     var example = data[Math.floor(Math.random() * data.length)];
     document.getElementById('reference').innerText = example.reference;
-    const table_body = document.getElementById('table-body');
-    // clear table
-    table_body.innerHTML = '';
-    // add new rows
-    for (let i = 0; i < example.acu.length; i++) {
-      const row = document.createElement('tr');
-      const index = document.createElement('th');
-      index.setAttribute('scope', 'row');
-      index.innerText = i + 1;
-      const acu = document.createElement('td');
-      acu.innerText = example.acu[i];
-      row.appendChild(index);
-      row.appendChild(acu);
-      table_body.appendChild(row);
-    }
+    document.getElementById('article').innerText = example.source;
   }
 </script>
 
-<!-- <div class="home"> -->
-<!-- <article class="post">
- -->
 <div>
-  <!-- {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }} -->
-  <!-- {{site.header_pages}} -->
-
-  <!-- <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header> -->
-  <!-- {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%} -->
-
-  <!-- <div class="post-content">
-    {{ content }} -->
-
-
-    <!-- {% assign data = site.data.acu-cnndm-test[0] %} -->
   <div class="container">
     <div class="row">
       <div class="col">
@@ -71,40 +34,21 @@ layout: default
       </div>
     </div>
     <br>
-    <div class="row position:sticky;">
-      <h3> Reference Summary </h3>
-      <p id="reference" class="bg-light"> </p>
-    </div>
     <div class="row">
-      <h3> ACUs </h3>
-    </div>
-    <div class="row overflow:scroll; height:500px;">
-      <div class="table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">ACU</th>
-            </tr>
-          </thead>
-          <tbody id="table-body">
-            <!-- {% assign listsize = data.acu.size | minus: 1%}
-          {% assign range = (0..listsize) %}
-          {% for i in range %} -->
-            <!-- <tr>
-            <th scope="row">{{i | plus: 1}}</th>
-            <td>{{data.acu[i]}}</td>
-          </tr> -->
-            <!-- {% endfor %} -->
-          </tbody>
-        </table>
+      <div class="col-6">
+        <h3> Article </h3>
+        <div class="h-scroll">
+          <p id="article"> </p>
+        </div>
+        <p id="article"> </p>
+      </div>
+      <div class="col-6">
+        <h3> Reference Summary </h3>
+        <p id="reference" class="bg-light"> </p>
       </div>
     </div>
   </div>
-  <!-- </div> -->
 </div>
-<!-- </article> -->
-<!-- </div> -->
 <style type="text/css">
   .table-responsive {
     max-height:400px;
