@@ -37,11 +37,11 @@ layout: default
     // sample a random example
     example = data[Math.floor(Math.random() * data.length)];
     document.getElementById('reference').innerText = example.reference;
-    document.getElementById('article').innerText = example.source;
     // get the system output
     var output = example["system_outputs"]["gpt3"];
     // update the output
     document.getElementById('output').innerText = output;
+    document.getElementById('article').innerText = example.source;
   }
 </script>
 
