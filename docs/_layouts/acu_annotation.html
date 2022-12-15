@@ -89,111 +89,111 @@ layout: default
   }
 </script>
 
-<div>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h1 class="page-heading">{{ page.title }}</h1>
-      </div>
-      <div class="col d-flex justify-content-end">
-        <button onclick="sampleData()" class="btn btn-primary">Sample Example</button>
+
+<div class="container w-75">
+  <div class="row">
+    <div class="col">
+      <h1 class="page-heading">{{ page.title }}</h1>
+    </div>
+    <div class="col d-flex justify-content-end">
+      <button onclick="sampleData()" class="btn btn-primary">Sample Example</button>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <h3> Reference Summary </h3>
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text" id="reference"> </p>
       </div>
     </div>
-    <br>
-    <div class="row">
-      <h3> Reference Summary </h3>
-      <div class="card">
-        <div class="card-body">
-          <p class="card-text" id="reference"> </p>
-        </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="btn-group" role="group" aria-label="Basic radio toggle button group" id="btn-group">
+      <input type="radio" class="btn-check" name="btnradio" id="btn-bart" autocomplete="off" checked>
+      <label class="btn btn-outline-primary" for="btn-bart">BART</label>
+    
+      <input type="radio" class="btn-check" name="btnradio" id="btn-brio" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btn-brio">BRIO</label>
+    
+      <input type="radio" class="btn-check" name="btnradio" id="btn-ctrlsum" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btn-ctrlsum">CTRLSum</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btn-gsum" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btn-gsum">GSum</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btn-matchsum" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btn-matchsum">MatchSum</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btn-brio-ext" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btn-brio-ext">BRIO-Ext</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btn-cliff" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btn-cliff">CLIFF</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btn-pegasus" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btn-pegasus">PEGASUS</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btn-simcls" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btn-simcls">SimCLS</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btn-frost" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btn-frost">FROST</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btn-gold" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btn-gold">GOLD</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btn-glob" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btn-glob">Global</label>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <h3> System Output </h3>
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text" id="output"> </p>
       </div>
     </div>
-    <hr>
-    <div class="row">
-      <div class="btn-group" role="group" aria-label="Basic radio toggle button group" id="btn-group">
-        <input type="radio" class="btn-check" name="btnradio" id="btn-bart" autocomplete="off" checked>
-        <label class="btn btn-outline-primary" for="btn-bart">BART</label>
-      
-        <input type="radio" class="btn-check" name="btnradio" id="btn-brio" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btn-brio">BRIO</label>
-      
-        <input type="radio" class="btn-check" name="btnradio" id="btn-ctrlsum" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btn-ctrlsum">CTRLSum</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btn-gsum" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btn-gsum">GSum</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btn-matchsum" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btn-matchsum">MatchSum</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btn-brio-ext" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btn-brio-ext">BRIO-Ext</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btn-cliff" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btn-cliff">CLIFF</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btn-pegasus" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btn-pegasus">PEGASUS</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btn-simcls" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btn-simcls">SimCLS</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btn-frost" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btn-frost">FROST</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btn-gold" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btn-gold">GOLD</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btn-glob" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btn-glob">Global</label>
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <h3> System Output </h3>
-      <div class="card">
-        <div class="card-body">
-          <p class="card-text" id="output"> </p>
-        </div>
-      </div>
-    </div>
-    <hr>
+  </div>
+  <hr>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ACU Score</th>
+          <th scope="col">normalized ACU Score</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <tr>
+          <td id="tab-acu"></td>
+          <td id="tab-nacu"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row">
+    <h3> ACU Labels </h3>
+  </div>
+  <div class="row overflow:scroll; height:500px;">
     <div class="table-responsive">
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">ACU Score</th>
-            <th scope="col">normalized ACU Score</th>
+            <th scope="col">#</th>
+            <th scope="col">ACU</th>
+            <th scope="col">Present</th>
           </tr>
         </thead>
-        <tbody id="table-body">
-          <tr>
-            <td id="tab-acu"></td>
-            <td id="tab-nacu"></td>
-          </tr>
+        <tbody id="acu-table-body">
         </tbody>
       </table>
     </div>
-    <div class="row">
-      <h3> ACU Labels </h3>
-    </div>
-    <div class="row overflow:scroll; height:500px;">
-      <div class="table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">ACU</th>
-              <th scope="col">Present</th>
-            </tr>
-          </thead>
-          <tbody id="acu-table-body">
-          </tbody>
-        </table>
-      </div>
-    </div>
   </div>
 </div>
+
 <style type="text/css">
   .table-responsive {
     max-height:400px;
