@@ -26,7 +26,11 @@ layout: default
       const acu = document.createElement('td');
       acu.innerText = acus[i];
       const label = document.createElement('td');
-      label.innerText = acus_labels[i];
+      if (acus_labels[i] == 1) {
+        label.innerText = "✔️";
+      } else {
+        label.innerText = "❌";
+      }
       row.appendChild(index);
       row.appendChild(acu);
       row.appendChild(label);
