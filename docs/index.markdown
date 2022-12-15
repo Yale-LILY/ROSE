@@ -5,7 +5,7 @@ layout: home
 This is a demo page for our **ROSE** 🌹 benchmark of our paper "Revisiting the Gold Standard:
 Grounding Summarization Evaluation with Robust Human Evaluation".
 
-Please visit [here](https://github.com/Yale-LILY/ROSE) for the github repo [page] of this project.
+Please visit [here](https://github.com/Yale-LILY/ROSE) for the github repo of this project.
 
 
 ## RoSE 🌹 Benchmark
@@ -34,7 +34,7 @@ We summarize the statistics below.
 | XSum  | Test | 500 | 8 | 4000 | `xsum` |
 | SamSum  | Test | 500 | 8 | 4000 | `samsum` |
 
-###  Human Annotations with Different Evalaution Protocols
+###  Human Annotations with Different Evaluation Protocols
 
 We have system outputs annotated with four different human evaluation protocols in total.
 We summarize them below.
