@@ -8,7 +8,7 @@ Grounding Summarization Evaluation with Robust Human Evaluation".
 
 ## RoSE 🌹 Benchmark
 
-RoSE can be downloaded with Hugging Face Datasets under `Salesforce/rose`.
+RoSE can be downloaded with Hugging Face Datasets under [`Salesforce/rose`](https://huggingface.co/datasets/Salesforce/rose).
 We provide a notebook, [demo.ipynb](demo.ipynb), for basic usage of our dataset.
 
 ### ACU Annotations
