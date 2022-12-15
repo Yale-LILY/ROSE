@@ -13,6 +13,7 @@ Please visit [here](https://github.com/Yale-LILY/ROSE) for the github repo of th
 RoSE can be downloaded with Hugging Face Datasets under `Salesforce/rose`.
 We provide the following interfaces for browsing the dataset.
 - [ACU Explorer](https://yale-lily.github.io/ROSE/acu/)
+- [ACU Annotation](https://yale-lily.github.io/ROSE/acu_annotation)
 - [Human Annotation with Different Evaluation Protocols](https://yale-lily.github.io/ROSE/protocol/)
 
 
