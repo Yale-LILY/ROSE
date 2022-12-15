@@ -3,7 +3,7 @@
 This repo contiains the RoSE benchmark of our paper "Revisiting the Gold Standard:
 Grounding Summarization Evaluation with Robust Human Evaluation".
 
-Please visit here for a demo [page](https://yale-lily.github.io/ROSE/) of this project.
+Please visit [here](https://yale-lily.github.io/ROSE/) for a demo pag of this project.
 
 
 ## RoSE 🌹 Benchmark
