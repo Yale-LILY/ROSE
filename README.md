@@ -8,7 +8,7 @@ Please visit here for a demo [page](https://yale-lily.github.io/ROSE/) of this p
 
 ## RoSE 🌹 Benchmark
 
-RoSE can be downloaded with Huggin Face Datasets under `Salesforce/rose`.
+RoSE can be downloaded with Hugging Face Datasets under `Salesforce/rose`.
 We provide a notebook, [demo.ipynb](demo.ipynb), for basic usage of our dataset.
 
 ### ACU Annotations
