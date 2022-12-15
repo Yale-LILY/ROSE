@@ -10,10 +10,10 @@ layout: default
 
   function updateACU(system_id) {
     var acus_labels = example["annotations"][system_id]["acu_labels"];
-    var acus = example["reference_acus"][system_id];
-    console.log(acus_labels);
-    console.log(acus);
-    console.log(acus.length)
+    var acus = example["reference_acus"];
+    // console.log(acus_labels);
+    // console.log(acus);
+    // console.log(acus.length);
     const table_body = document.getElementById('acu-table-body');
     // clear table
     table_body.innerHTML = '';
