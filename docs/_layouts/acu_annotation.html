@@ -6,10 +6,60 @@ layout: default
 
 <script>
   let data;
+  let example;
+
+  function updateACU(system_id) {
+    var acus_labels = example["annotations"][system_id]["acu_labels"];
+    var acus = example["reference_acus"][system_id];
+    const table_body = document.getElementById('acu-table-body');
+    // clear table
+    table_body.innerHTML = '';
+    // add new rows
+    for (let i = 0; i < acus.length; i++) {
+      const row = document.createElement('tr');
+      const index = document.createElement('th');
+      index.setAttribute('scope', 'row');
+      index.innerText = i + 1;
+      const acu = document.createElement('td');
+      acu.innerText = example.acu[i];
+      const label = document.createElement('td');
+      label.innerText = acus_labels[i];
+      row.appendChild(index);
+      row.appendChild(acu);
+      row.appendChild(label);
+      table_body.appendChild(row);
+    }
+  }
+
+
+  function changeSystem(target) {
+    // console.log(target);
+    var name = target.getAttribute('id');
+    if (name == null) {
+      return;
+    }
+    // alert(name);
+    // parse the name to get the system name, remove the first element
+    var system = name.split('-').slice(1).join('-');
+    // get the system output
+    var output = example["system_outputs"][system];
+    // update the output
+    document.getElementById('output').innerText = output;
+    // update score table content
+    var output = example["annotations"][system];
+    document.getElementById('tab-acu').innerText = output["acu"].toFixed(2);
+    document.getElementById('tab-nacu').innerText = output["normalized_acu"].toFixed(2);
+    // update acu table
+    updateACU(system);
+  }
+
   function main() {
     data = {{ site.data.acu-cnndm-test-annotations | jsonify }};
+    const select = document.getElementById('btn-group');
+    select.addEventListener('click', ({ target }) => changeSystem(target));
     // console.log(data);
   }
+
   window.onload = function () {
     main();
     sampleData();
@@ -17,23 +67,18 @@ layout: default
 
   function sampleData() {
     // sample a random example
-    var example = data[Math.floor(Math.random() * data.length)];
+    example = data[Math.floor(Math.random() * data.length)];
     document.getElementById('reference').innerText = example.reference;
-    const table_body = document.getElementById('table-body');
-    // clear table
-    table_body.innerHTML = '';
-    // add new rows
-    for (let i = 0; i < example.acu.length; i++) {
-      const row = document.createElement('tr');
-      const index = document.createElement('th');
-      index.setAttribute('scope', 'row');
-      index.innerText = i + 1;
-      const acu = document.createElement('td');
-      acu.innerText = example.acu[i];
-      row.appendChild(index);
-      row.appendChild(acu);
-      table_body.appendChild(row);
-    }
+    // get the system output
+    var output = example["system_outputs"]["bart"];
+    // update the output
+    document.getElementById('output').innerText = output;
+    // update table content
+    var output = example["annotations"]["bart"];
+    document.getElementById('tab-acu').innerText = output["acu"].toFixed(2);
+    document.getElementById('tab-nacu').innerText = output["normalized_acu"].toFixed(2);
+    // update acu table
+    updateACU("bart");
   }
 </script>
 
@@ -56,6 +101,7 @@ layout: default
         </div>
       </div>
     </div>
+    <hr>
     <div class="row">
       <div class="btn-group" role="group" aria-label="Basic radio toggle button group" id="btn-group">
         <input type="radio" class="btn-check" name="btnradio" id="btn-bart" autocomplete="off" checked>
@@ -73,7 +119,7 @@ layout: default
         <input type="radio" class="btn-check" name="btnradio" id="btn-matchsum" autocomplete="off">
         <label class="btn btn-outline-primary" for="btn-matchsum">MatchSum</label>
 
-        <input type="radio" class="btn-check" name="btnradio" id="btn-brioext" autocomplete="off">
+        <input type="radio" class="btn-check" name="btnradio" id="btn-brio-ext" autocomplete="off">
         <label class="btn btn-outline-primary" for="btn-brioext">BRIO-Ext</label>
 
         <input type="radio" class="btn-check" name="btnradio" id="btn-cliff" autocomplete="off">
@@ -95,6 +141,7 @@ layout: default
         <label class="btn btn-outline-primary" for="btn-global">Global</label>
       </div>
     </div>
+    <hr>
     <div class="row">
       <h3> System Output </h3>
       <div class="card">
@@ -103,8 +150,25 @@ layout: default
         </div>
       </div>
     </div>
+    <hr>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ACU Score</th>
+            <th scope="col">normalized ACU Score</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <tr>
+            <td id="tab-acu"></td>
+            <td id="tab-nacu"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <div class="row">
-      <h3> ACUs </h3>
+      <h3> ACU Labels </h3>
     </div>
     <div class="row overflow:scroll; height:500px;">
       <div class="table-responsive">
@@ -113,9 +177,10 @@ layout: default
             <tr>
               <th scope="col">#</th>
               <th scope="col">ACU</th>
+              <th scope="col">Present</th>
             </tr>
           </thead>
-          <tbody id="table-body">
+          <tbody id="acu-table-body">
           </tbody>
         </table>
       </div>
