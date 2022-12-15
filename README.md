@@ -21,7 +21,7 @@ It contains four parts:
 
 We summarize the statistics below.
 
-| Dataset | Split | #Doc. | # Sys. | # Toal Summ. | HF Name
+| Dataset | Split | #Doc. | #Sys. | #Total Summ. | HF Name
 | --- | --- | --- | --- | --- | --- |
 | CNNDM | Test | 500 | 12 | 6000 | `cnndm_test` |
 | CNNDM | Validation | 1000 | 8 | 8000 | `cnndm_validation` |
@@ -37,8 +37,8 @@ We summarize them below.
 | --- | --- | --- | --- |
 | Prior |  ✗ | ✗ | ✗ | 
 | Ref-free | ✓ | ✗ | ✗ |
-| Ref-based | ✓ | ✓ | ✗ |
-| ACU | ✓ | ✓ | ✓ |
+| Ref-based | ✗ | ✓ | ✗ |
+| ACU | ✗ | ✓ | ✓ |
 
 We annotated two sets of system summaries.
 
