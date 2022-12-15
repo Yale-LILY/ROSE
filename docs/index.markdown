@@ -5,7 +5,7 @@ layout: home
 This is a demo page for our **ROSE** 🌹 benchmark of our paper "Revisiting the Gold Standard:
 Grounding Summarization Evaluation with Robust Human Evaluation".
 
-Please visit [here](https://github.com/Yale-LILY/ROSE) for the github repo of this project.
+**Please visit [here](https://github.com/Yale-LILY/ROSE) for the github repo of this project.**
 
 
 ## RoSE 🌹 Benchmark
