@@ -29,7 +29,7 @@ We summarize the statistics below.
 | XSum  | Test | 500 | 8 | 4000 | `xsum` |
 | SamSum  | Test | 500 | 8 | 4000 | `samsum` |
 
-###  Human Annotations with Different Evalaution Protocols
+###  Human Annotations with Different Evaluation Protocols
 
 We have system outputs annotated with four different human evaluation protocols in total.
 We summarize them below.
