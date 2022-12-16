@@ -7,8 +7,8 @@ Grounding Summarization Evaluation with Robust Human Evaluation".
 
 We provide the following interfaces for browsing the dataset.
 # **[ACU Explorer](https://yale-lily.github.io/ROSE/acu/)**
-# **[ACU Annotation](https://yale-lily.github.io/ROSE/acu_annotation)**
-# **[Human Annotation with Different Evaluation Protocols](https://yale-lily.github.io/ROSE/protocol/)**
+# **[ACU Matching Annotations](https://yale-lily.github.io/ROSE/acu_annotation)**
+# **[Human Annotations with Different Evaluation Protocols](https://yale-lily.github.io/ROSE/protocol/)**
 
 
 **Please visit [here](https://github.com/Yale-LILY/ROSE) for the github repo of this project.**
