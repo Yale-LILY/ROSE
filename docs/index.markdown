@@ -2,8 +2,8 @@
 layout: home
 ---
 
-This is a demo page for our **ROSE** 🌹 benchmark of our paper "Revisiting the Gold Standard:
-Grounding Summarization Evaluation with Robust Human Evaluation".
+This is a demo page for our **ROSE** 🌹 benchmark of our paper ["Revisiting the Gold Standard:
+Grounding Summarization Evaluation with Robust Human Evaluation"](https://arxiv.org/abs/2212.07981).
 
 We provide the following interfaces for browsing the dataset.
 # **[ACU Explorer](https://yale-lily.github.io/ROSE/acu/)**
