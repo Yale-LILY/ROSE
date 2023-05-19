@@ -46,6 +46,18 @@ We annotated two sets of system summaries.
 1. Summaries of 12 fine-tuned systems. The huggingface data split name is `cnndm_protocol`.
 2. Zero-shot summaries from large langauge models (GPT3, T0), together with summaries from BRIO and BART. The huggingface data split name is `cnndm_protocol_gpt3`.
 
+## Citation
+
+Please cite our paper if you use RoSE in your work:
+```bibtex
+@inproceedings{Liu2022RevisitingTG,
+  title={Revisiting the Gold Standard: Grounding Summarization Evaluation with Robust Human Evaluation},
+  author={Yixin Liu and Alexander R. Fabbri and Pengfei Liu and Yilun Zhao and Linyong Nan and Ruilin Han and Simeng Han and Shafiq R. Joty and Chien-Sheng Wu and Caiming Xiong and Dragomir R. Radev},
+  booktitle={Proceedings of the 61th Annual Meeting of the Association for Computational Linguistics},
+  year={2023},
+}
+```
+
 
 
 
