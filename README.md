@@ -1,10 +1,24 @@
 # ROSE 🌹
 
-This repo contiains the RoSE benchmark of our paper ["Revisiting the Gold Standard:
+This repo is for our ACL 2023 paper ["Revisiting the Gold Standard:
 Grounding Summarization Evaluation with Robust Human Evaluation"](https://arxiv.org/abs/2212.07981).
+We provide the scripts for our RoSE benchmark and meta-evaluation.
 
 **Please visit [here](https://yale-lily.github.io/ROSE/) for a demo page of this project.**
 
+![](ACU.png)
+
+## Quick Links
+- [ROSE 🌹](#ROSE-🌹)
+- [RoSE 🌹 Benchmark](#RoSE-🌹-Benchmark)
+  - [ACU Annotations](#ACU-Annotations)
+  - [Human Annotations with Different Evaluation Protocols](#Human-Annotations-with-Different-Evaluation-Protocols)
+- [Meta-Evaluation](#Meta-Evaluation)
+  - [correlation.py](#correlationpy)
+  - [stat_test.py](#stattestpy)
+  - [power_analysis.py](#poweranalysispy)
+  - [demo.py](#demopy)
+- [Citation](#Citation)
 
 ## RoSE 🌹 Benchmark
 
@@ -44,7 +58,23 @@ We summarize them below.
 We annotated two sets of system summaries.
 
 1. Summaries of 12 fine-tuned systems. The huggingface data split name is `cnndm_protocol`.
-2. Zero-shot summaries from large langauge models (GPT3, T0), together with summaries from BRIO and BART. The huggingface data split name is `cnndm_protocol_gpt3`.
+2. Zero-shot summaries from large language models (GPT3, T0), together with summaries from BRIO and BART. The huggingface data split name is `cnndm_protocol_gpt3`.
+
+## Meta-Evaluation
+
+We provide scripts for statistical analysis of the meta-evaluation results in our paper.
+
+### correlation.py
+functions for computing correlation coefficients
+
+### stat_test.py
+functions for conducting statistical tests, including bootstrap, permutation test and computing confidence interval
+
+### power_analysis.py
+functions for computing power analysis, please note that computing power analysis can be time-consuming, and please maximize the number of processes to speed up the computation
+
+### demo.py
+demo script for utilizing the functions in the above files
 
 ## Citation
 
@@ -57,19 +87,3 @@ Please cite our paper if you use RoSE in your work:
   year={2023},
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
