@@ -6,19 +6,18 @@ We provide the scripts for our RoSE benchmark and meta-evaluation.
 
 **Please visit [here](https://yale-lily.github.io/ROSE/) for a demo page of this project.**
 
-![](ACU.png)
+![](ACU.svg)
 
 ## Quick Links
-- [ROSE 🌹](#ROSE-🌹)
-- [RoSE 🌹 Benchmark](#RoSE-🌹-Benchmark)
-  - [ACU Annotations](#ACU-Annotations)
-  - [Human Annotations with Different Evaluation Protocols](#Human-Annotations-with-Different-Evaluation-Protocols)
-- [Meta-Evaluation](#Meta-Evaluation)
+- [RoSE 🌹 Benchmark](##rose--benchmark)
+  - [ACU Annotations](#acu-annotations)
+  - [Human Annotations with Different Evaluation Protocols](#human-annotations-with-different-evaluation-protocols)
+- [Meta-Evaluation](#meta-evaluation)
   - [correlation.py](#correlationpy)
   - [stat_test.py](#stattestpy)
   - [power_analysis.py](#poweranalysispy)
   - [demo.py](#demopy)
-- [Citation](#Citation)
+- [Citation](#citation)
 
 ## RoSE 🌹 Benchmark
 
